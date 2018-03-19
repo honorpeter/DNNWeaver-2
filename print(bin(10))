@@ -1,0 +1,7 @@
+import numpy as np
+import numpy
+import random
+a = np.random.randn(406750)
+b = a / 100
+b.tofile('E:\pythonpractice\minist\weight\weight.bin')
+print(b)
