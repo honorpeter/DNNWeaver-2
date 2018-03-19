@@ -1,0 +1,30 @@
+//cifar10_full.prototxt
+
+6  //same style
+8
+1
+0 //exchange
+134453280 1 3 32 32 	//inputshape 	: 	num 	channel 	width 	length
+134217728 32 3 5 5  	//conv1			:   num_out	channel		kernl_w kernl__l
+134459424 1 32 16 16	//pooling1		:	num_out		in_channel	pol_w	pol_l
+1
+134459424 1 32 16 16	//inputshape
+134223872 0 0 0 0		//?Relu
+134475808 1 32 16 16	//?Normalize?
+0
+134475808 1 32 16 16    //inputshape
+134223872 32 32 5 5		//conv2
+134492192 1 32 8 8 		//pool2?
+1
+134492192 1 32 8 8      //
+134289408 0 0 0 0		//relu2
+134496288 1 32 8 8		//normal2
+0
+134496288 1 32 8 8		//
+134289408 64 32 5 5		//conv3
+134500384 1 64 4 4		//pool3
+1
+134500384 1 64 4 4		//inputshape
+134420480 10 1 1024 1	//innerproduct	:	num_out	inchannel	outlength	outwidth
+134631456 1 10 1 1		//result		:	10 classification
+disorderly
